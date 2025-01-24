@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qr code</title>
+    <style>
+    body,html{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+    h2{
+        font-size: 300%;
+    }
+    .container{
+        background-color: rgb(1, 58, 53);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .box{
+        background-color: rgba(0, 65, 95, 0.521);
+        text-align: center;
+        padding: 50px 50px;
+        border-radius: 20px;
+    }
+    .image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    button{
+        background-color: skyblue;
+        padding: 20px 50px;
+        border-radius: 20px;
+    }
+</style>
+</head>
+<body>
+    <body>
+        <div class="container">
+        <div class="box">
+            <input type="text" id="qrlink" placeholder="enter url">
+            <br><br>
+            <button onclick="gernate()">gernate</button>
+            <br>
+            <img src="" id="imgqr">
+        </div>
+        </div>
+        <script>
+            let input =document.getElementById("qrlink");
+            let img= document.getElementById("imgqr");
+            function gernate(){
+                img.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + input.value;
+            }
+        </script>
+</body>
+</html>
