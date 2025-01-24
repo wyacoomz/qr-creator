@@ -1,2 +1,2 @@
 # qr-creator
-creates a qr from links using qr api
+creates qr from links using qr api
